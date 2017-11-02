@@ -1,10 +1,35 @@
 angular-gridster2
 ==============
-# Angularjs 1.x version [Demo](http://tiberiuzuld.github.io/angular-gridster2/angularjs)
+
+Use angular-gridster2 with angular#1.4.x. angular-gridster2@1.x is developed with angular#1.6.6 as dependency.
+
+Major issues for using angular-gridster2 with angular#1.4.x are Component helper, which is added in angular#1.5 and property bindings issue.
+
+Angular-Gridster2 has component() method used in its script, for this just install angular-component and include component script right after angular.js to ensure component menthod is available. Also bindings in gridster.js are changed ('<' is changed to '='') to work with angular#1.4.x.
+
+(new) - additional setup changes
+
+# Angularjs 1.x original version [link](https://github.com/tiberiuzuld/angular-gridster2/tree/1.x)
+# Angular-Component 1.3+ [link](https://toddmotto.com/exploring-the-angular-1-5-component-method/)
 
 #### Install
+
 ```bash
+  npm install angular-component --save  (new)
   npm install angular-gridster2@1.x --save
+ ```
+
+## Manual Installation (new)
+Note: you must include this script straight after angular.js and before your application code to ensure the component() method has been added to the angular.module global.
+
+```
+<body>
+  <!-- html above -->
+  <script src="angular-1.x.js"></script>
+  <script src="dist/angular-component.js"></script>
+  <script src="app.js"></script>
+</body>
+
 ```
 
 Then import the following in your HTML:
